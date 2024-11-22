@@ -1,0 +1,73 @@
+/*---------------------------------------------------- LOGIN -------------------------------------------------------------------------*/
+
+#Login{
+    font-family: "Cabin", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+    background-image: url(../Images/Fondo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.FormInicio{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    border-radius: 15px;
+    background-color: #EEEEEE;
+}
+
+.FormInicio h2{
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #863dea;
+    margin-bottom: 25px;
+}
+
+.FormInicio label{
+    font-size: 17px;
+    color: #ABBAD9;
+    margin-bottom: 10px;
+}
+
+.FormInicio input{
+    padding: 17px 11px;
+    border: 1px solid #106492;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    background-color: white;
+    outline: none;
+    color: #106492;
+    font-size: 17px;
+}
+
+.enviar {
+    display: block;
+    border: 1px solid #106492;
+    color: #106492;
+    text-align: center;
+    transition: 0.4s;
+    border-radius: 5rem;
+    padding: 15px;
+    text-decoration: none;
+}
+
+
+.enviar:hover{
+    background: rgb(119, 10, 227);
+    color: white;
+}
+
+/*Responsive*/
+/*Para tablet*/
+@media(max-width:768px){
+    #Login{
+        width: 100%;
+    }    
+}

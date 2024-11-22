@@ -1,0 +1,408 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* font-family: ; */
+    text-decoration: none;
+}
+
+/*---------------------------------------------------- HEADER -------------------------------------------------------------------------*/
+
+header {
+    height: 100px;
+    
+    background: #c4bdff;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Cabin", sans-serif;
+    transition: 0.7s;
+    z-index: 10;
+}
+
+header.abajo{
+    background: #a89ffe;
+    position: fixed;
+    width: 100rem;
+}
+
+.logo {
+    text-transform: uppercase;
+    font-size: 40px;
+    font-family: "Rubik Bubbles", system-ui;
+    color: #863dea;
+    transition: 1.5s;
+}
+
+.menu a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    padding: 0 10px;
+    transition: 0.4s;
+}
+
+.mostrar-menu, .esconder-menu{
+    font-size: 30px;
+    cursor: pointer;
+    transition: 0.4s;
+    display: none;
+    color: white;
+}
+
+.mostrar-menu {
+    order: 1;
+
+}
+
+.menu a:hover, .mostrar-menu:hover, .esconder-menu:hover{
+    color: rgb(119, 10, 227);
+}
+
+#check {
+    display: none;
+}
+
+.esconder-menu {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+}
+
+#check:checked ~ .menu{
+    right: 0;
+}
+
+/*Responsive*/
+/*Para tablet*/
+@media(max-width:768px){
+    .mostrar-menu, .esconder-menu{
+        display: block;
+    }
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #ABBAD9;
+        right: -100%;
+        /* left: 0; */
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.8s;
+    }
+
+    .menu a {
+        display: block;
+        padding: 20px;
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+
+    #productos{
+        flex-direction: column;
+    }
+
+    #contacto{
+        flex-direction: column;
+    }
+}
+
+/*---------------------------------------------------- BANNER -------------------------------------------------------------------------*/
+
+#banner {
+    padding: 0 50px;
+    background-image: url(./Images/BannerPapeleria.jpg);
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#banner::before{
+    content: '';
+    background: rgba(189, 186, 186, 0.366);
+    position: absolute;
+    width: 100%;
+    height: 70vh;
+    left: 0;
+}
+
+.contenido-banner h3{
+    font-size: 23px;
+    font-weight: 400;
+    padding: 10px 0px;
+    color: #863dea;
+}
+
+.contenido-banner h3 span{
+    font-weight: 600;
+    font-size: 50px;
+    color: white;
+}
+
+.contenido-banner{
+    position: relative;
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Delius Unicase", cursive;
+}
+
+.boton-comprar{
+    text-decoration: none;
+    color: white;
+    border: 1px solid #863dea;
+    border-radius: 5rem;
+    padding: 20px 40px;
+    align-self: baseline;
+    transition: all 0.4s;
+}
+
+.boton-comprar:hover{
+    background: rgb(119, 10, 227);
+}
+
+/*---------------------------------------------------- ABOUT -------------------------------------------------------------------------*/
+
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    color: white;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: #e1dff7;
+    font-family: "Delius Unicase", cursive;
+}
+
+.heading span{
+    color: #863dea;
+}
+
+#SobreNosotros .row{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    font-family: "Delius Unicase", cursive;
+}
+
+#SobreNosotros .row .video-container{
+    flex: 1 1 40rem;
+    position: relative;
+}
+
+#SobreNosotros .row .video-container video{
+    width: 100%;
+    border: 1.5rem solid #fff;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    height: 100%;
+    object-fit: cover;
+}
+
+#SobreNosotros .row .video-container h3{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    width: 100%;
+    padding: 1rem 2rem;
+    background: #fff;
+    text-align: center;
+    mix-blend-mode: screen;
+    font-family: "Delius Unicase", cursive;
+}
+
+#SobreNosotros .row .contenido{
+    flex: 1 1 40rem;
+    padding-left: 2rem;
+}
+
+#SobreNosotros .row .contenido h3{
+    font-size: 3rem;
+    color: #863dea;
+}
+
+#SobreNosotros .row .contenido p{
+    font-size: 1.8rem;
+    color: #999;
+    padding: .5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;
+    font-family: "Cabin", sans-serif;
+    text-align: justify;
+}
+
+/*---------------------------------------------------- PRODUCTOS -------------------------------------------------------------------------*/
+
+.HeadProducto {
+    text-align: center;
+    font-size: 4rem;
+    color: white;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: #e1dff7;
+    font-family: "Delius Unicase", cursive;
+}
+
+.HeadProducto span{
+    color: #863dea;
+}
+
+#MovProduc .productos{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    font-family: "Cabin", sans-serif;
+}
+
+#MovProduc .productos .box{
+    flex: 1 1 30rem;
+    position: relative;
+    box-shadow: 0 .5rem 1.5rem rgba(184, 131, 228, 0.514);
+    border-radius: .5rem;
+    border: .1rem solid rgba(0,0,0,.1);
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+#MovProduc .productos .box img{
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    overflow: hidden;
+    height: 400px;
+}
+
+#productos img:hover{
+    transform: scale(1.1);
+}
+
+#productos div h4{
+    color: #86b1c8;
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+#productos div h5{
+    color: #106492;
+    font-size: 18px;
+}
+
+.boton-saber-mas{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(28, 158, 167);
+    padding: 20px 40px;
+    border: 1px solid #863dea;
+    border-radius: 5rem;
+    margin-top: 15px;
+    transition: all 0.4s; 
+    align-self: baseline;
+}
+
+.boton-saber-mas:hover{
+    background: rgb(119, 10, 227);
+    color: white;
+}
+
+/*---------------------------------------------------- CONTACTO -------------------------------------------------------------------------*/
+
+#contacto{
+    background: #e1dff7;
+    padding: 50px 0;
+    color: black; 
+    font-family: "Cabin", sans-serif;
+}
+
+#contacto h4{
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: #e1dff7;
+    font-family: "Delius Unicase", cursive;
+}
+
+#contacto span{
+    color: #863dea;
+}
+
+#contacto form{
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.datos-form div{
+    padding: 10px;
+    flex: 1;
+    
+}
+
+form label{
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input, form textarea{
+    background: #c8acf0;
+    border-radius: 5px;
+    border: 2px solid #863dea;
+    padding: 10px 5px;
+    outline: 0;
+    color: white;
+    width: 100%;
+}
+
+form input:focus, form textarea:focus{
+    border-color: #863dea;
+    box-shadow: 0 1px 0 1px rgba(209, 58, 179, 0.521);
+}
+
+form input::placeholder, form textarea::placeholder{
+    color: white;
+    font-family: "Cabin", sans-serif;
+}
+
+.mensaje{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.boton-formulario .boton-saber-mas{
+    display: block;
+    text-decoration: none;
+    color: rgb(28, 158, 167);
+    padding: 20px 40px;
+    border: 1px solid #863dea;
+    border-radius: 5rem;
+    margin-top: 15px;
+    transition: all 0.4s; 
+    font-family: "Cabin", sans-serif;
+}
+
+.boton-formulario .boton-saber-mas:hover{
+    background: rgb(119, 10, 227);
+    color: white;
+}
+
+/*---------------------------------------------------- FOOTER -------------------------------------------------------------------------*/
+
+footer{
+    background: #b1c7d3;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+
